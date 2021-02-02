@@ -1,0 +1,64 @@
+@import "../../../assets/styles/utils/variables";
+
+.description {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+    padding-bottom: 20px;
+
+    & > .md-action {
+        position: absolute;
+        right: 33px;
+        bottom: 22px;
+        cursor: pointer;
+        z-index: 9;
+        font-size: 1rem;
+    }
+
+    & > .preview {
+        & > .react-mde {
+            border: none;
+            border-bottom: 1px dashed $light-grey;
+            text-align: initial;
+            .mde-header {
+                visibility: hidden;
+                height: 0;
+            }
+            .mde-preview-content {
+                padding-left: 0;
+            }
+            &.error {
+                border-bottom: 1px dashed $red;
+            }
+        }
+        .mde-preview {
+            height: fit-content;
+            min-height: auto !important;
+        }
+    }
+
+    &.feature {
+        width: 95%;
+        margin: 0;
+
+        & > .md-action {
+            right: 5px;
+        }
+    }
+
+    & > .error-message {
+        color: $red;
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    &.project {
+        .react-mde.react-mde-tabbed-layout {
+            text-align: center;
+        }
+    }
+}

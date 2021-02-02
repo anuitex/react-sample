@@ -1,0 +1,22 @@
+.spinner-wrapper {
+    background: rgba(0, 0, 0, 0.116);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 999999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .ant-spin-lg .ant-spin-dot {
+        font-size: calc(36px + 3vw) !important;
+        width: 1.3em !important;
+        height: 1.3em !important;
+    }
+    .ant-spin-lg .ant-spin-dot i {
+        width: 44px !important;
+        height: 44px !important;
+    }
+}

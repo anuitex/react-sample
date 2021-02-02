@@ -1,0 +1,110 @@
+@import "../../../assets/styles/utils/mixines";
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    text-align: center;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.project-wrapper {
+    padding-top: 2vh;
+    padding-bottom: 100px;
+
+    & > .save-btn {
+        position: fixed;
+        right: 5%;
+        top: 5%;
+        width: 110px;
+        z-index: 10;
+    }
+
+    & > .project {
+        position: relative;
+        padding: 0 1%;
+        background: white;
+        margin: auto 1%;
+        border-radius: 15px;
+        box-shadow: 0px 0px 20px -9px #0000009c;
+        .project-content {
+            margin-top: 40px;
+            & > .description {
+                position: relative;
+                text-align: center;
+                margin: 0 auto;
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+
+    & > .features-wrapper {
+        border-radius: 10px;
+        background: white;
+        margin: 0 1%;
+        box-shadow: 0px 0px 20px -9px #0000009c;
+    }
+    & > .title-table {
+        margin: 0 1%;
+        padding: 0 1%;
+        text-align: center;
+    }
+    & > .title-actions {
+        & > .ant-col {
+            @include flex-row-content-align;
+            & > h1 {
+                font-size: 1.5rem;
+                text-align: center;
+                margin: 0;
+            }
+        }
+        .ant-input-group {
+            text-align: center;
+            width: 155px;
+            margin-left: 10%;
+            @include flex-row-content-align;
+            .estimate-features {
+                position: absolute;
+                bottom: -24px;
+                left: 21%;
+                &.second {
+                    left: auto;
+                    right: 22%;
+                }
+            }
+            & > input {
+                color: black;
+                font-weight: 700;
+                &:not(.ant-input-disabled) {
+                    width: 100px !important;
+                }
+                &.ant-input-disabled.site-input-split {
+                    width: 50px !important;
+
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+        }
+        .ant-radio-group {
+            // margin-right: 20px;
+            .ant-radio-button-wrapper {
+                width: 50px;
+                padding: 0;
+                text-align: center;
+                &.close.ant-radio-button-wrapper-checked {
+                    background: #f74152;
+                    border-color: #f74152;
+
+                    &:not(.ant-radio-button-wrapper-disabled):before {
+                        background-color: #f74152;
+                    }
+                }
+            }
+        }
+    }
+}

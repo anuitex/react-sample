@@ -1,0 +1,25 @@
+FROM node:12.18.3 as builder
+
+RUN mkdir /usr/src/app
+
+WORKDIR /usr/src/app
+
+RUN npm i -g env-cmd
+RUN npm i -g webpack-cli@3.3.11 
+COPY package*.json .
+
+RUN npm install
+
+COPY . /usr/src/app
+COPY ./tsconfig.json /usr/src/app/tsconfig.json
+COPY ./.env /usr/src/app/.env
+
+RUN npm run build
+
+FROM nginx:1.13.9-alpine
+COPY --from=builder /usr/src/app/dist /usr/share/nginx/html
+RUN rm -rf /etc/nginx/conf.d
+COPY config /etc/nginx
+
+EXPOSE 88
+CMD ["nginx", "-g", "daemon off;"]

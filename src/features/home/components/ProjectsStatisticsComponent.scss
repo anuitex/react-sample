@@ -1,0 +1,34 @@
+@import "../../../assets/styles/utils/mixines";
+@import "../../../assets/styles/utils/variables";
+
+.statistic-wrapper {
+    @include flex-column-center;
+    padding: 2vh 5%;
+    .statistics.top {
+        position: relative;
+        right: 3%;
+    }
+    .statistics {
+        @include flex-column-center(flex-start);
+        & > div:first-child {
+            margin-bottom: 5vh;
+        }
+        & > div {
+            color: #001529;
+            font-weight: 500;
+
+            & > span.description {
+                font-size: 1.3rem;
+            }
+            & > span.value {
+                margin-left: 10px;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    & > .center {
+        @include flex-row-content-align(center, space-around);
+        width: 100%;
+    }
+}

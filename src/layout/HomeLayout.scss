@@ -1,0 +1,40 @@
+$header-height: 7vh;
+
+.HomeLayout {
+    & > header {
+        position: relative;
+        height: $header-height;
+    }
+
+    & > section.ant-layout {
+        height: 100vh - $header-height;
+    }
+
+    .ant-menu-item.search {
+        padding: 0 !important;
+
+        &.ant-menu-item-selected {
+            background-color: transparent;
+        }
+
+        .ant-input-search {
+            height: 100%;
+            & > .ant-input-wrapper,
+            input {
+                height: 100%;
+            }
+
+            button {
+                height: 100%;
+
+                .anticon-search {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    & > .SideMenuLayout_content {
+        position: relative;
+    }
+}

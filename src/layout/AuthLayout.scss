@@ -1,0 +1,20 @@
+@import "../assets/styles/utils/mixines";
+
+.auth-layout {
+  background: #e6e6e6;
+  height: 100vh;
+
+  @include flex-row-content-align;
+
+  .form-wrapper {
+    position: relative;
+    width: 30%;
+    padding: 2% 5%;
+    border-radius: 10px;
+    height: 40%;
+    background: #ffffff;
+    box-shadow: 0px 0px 23px -10px #0000006b;
+    min-width: 350px;
+    @include flex-column-center;
+  }
+}

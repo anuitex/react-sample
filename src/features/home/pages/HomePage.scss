@@ -1,0 +1,9 @@
+.wrapper {
+    & > .header {
+        // @include flex-row-content-align(center, flex-end);
+
+        background: #0000000d;
+        box-shadow: 0px -10px 18px 0px #0000008c;
+        position: relative;
+    }
+}

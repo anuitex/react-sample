@@ -1,0 +1,10 @@
+.redirect {
+    text-align: center;
+}
+
+.ant-table-wrapper {
+    min-height: 330px;
+    & > table {
+        min-height: 330px;
+    }
+}

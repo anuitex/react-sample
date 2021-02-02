@@ -1,0 +1,26 @@
+.icon-menu {
+    padding-left: 24px;
+    position: absolute !important;
+    bottom: 0;
+    text-align: end;
+
+    &.ant-menu-item-selected {
+        background-color: transparent !important;
+    }
+    .anticon {
+        font-size: 2rem;
+    }
+}
+
+.ant-layout-sider-collapsed {
+    .ant-menu-submenu-title,
+    .icon-menu {
+        padding: 0 !important;
+        text-align: center;
+        width: 100%;
+    }
+
+    .anticon {
+        font-size: 2rem !important;
+    }
+}

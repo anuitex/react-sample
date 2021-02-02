@@ -1,0 +1,40 @@
+@import "../../../assets/styles/utils/variables";
+
+.wrapper-input-validation {
+    padding-bottom: 20px;
+    display: block;
+    position: relative;
+    & > input {
+        background: transparent;
+        border: none;
+        outline: none;
+        width: 100%;
+        border-bottom: 1px dashed $light-grey;
+        &:focus-within {
+            border-bottom: 1px dashed $blue;
+        }
+
+        &.error {
+            border-bottom: 1px dashed $red;
+        }
+    }
+    & > .error-message {
+        color: $red;
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    &.title {
+        & > input {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+    }
+    &.project {
+        & > input {
+            text-align: center;
+        }
+    }
+}

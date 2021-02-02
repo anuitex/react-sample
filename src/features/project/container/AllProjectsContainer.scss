@@ -1,0 +1,17 @@
+@import "../../../assets/styles/utils/mixines";
+
+.all-projects-wrapper {
+    padding-top: 50px;
+    & > h1 {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    & > .ant-pagination {
+        @include flex-row-content-align;
+        position: relative;
+        & > .ant-pagination-options {
+            position: absolute;
+            right: 10px;
+        }
+    }
+}

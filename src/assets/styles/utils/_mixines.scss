@@ -1,0 +1,72 @@
+@mixin absolute-zero($z-index: 0) {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-index;
+}
+
+@mixin flex-row-align($align: center) {
+  display: flex;
+  align-items: $align;
+}
+
+@mixin flex-row-content-align($align: center, $justify-content: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align;
+}
+
+@mixin flex-column-center($align-items: center, $justify-content: center) {
+  display: flex;
+  flex-direction: column;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin description {
+  color: $grey;
+  font-size: 15px;
+  letter-spacing: -0.36px;
+}
+
+//Components
+@mixin forgot-password {
+  display: block;
+  font-family: "Work Sans", sans-serif;
+  color: $blue;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  line-height: 1.33;
+  letter-spacing: -0.36px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@mixin action-with-description {
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  & > span {
+    color: $grey;
+    display: block;
+    margin-bottom: 5px;
+  }
+  & > a {
+    @include forgot-password;
+  }
+}
+@mixin h3_span {
+  h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: -0.48px;
+    margin: 0;
+  }
+  span {
+    line-height: 1.33;
+    @include description;
+  }
+}
